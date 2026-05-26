@@ -1,0 +1,483 @@
+/* ==========================================================================
+   INYECCIÓN LOCAL DE LA FIRMA (CARGA BLINDADA DESDE TU CARPETA)
+   ========================================================================== */
+@font-face {
+    font-family: 'Pinyon Script Local';
+    src: url('img/PinyonScript-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* CONFIGURACIÓN GENERAL Y BASE DEL SITIO (FONDO MARFIL PREMIUM) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fbf9f4; /* EL MARFIL LIMPIO PERFECTO */
+    color: #282c30; /* TEXTO GRIS GRAFITO */
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   MENÚ DE NAVEGACIÓN FLOATING GLASS
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 20px;
+    left: 5%;
+    width: 90%; 
+    background-color: rgba(40, 44, 48, 0.55); /* Base gris transparente */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(40, 44, 48, 0.15);
+    transition: all 0.3s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.header-finca-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #fbf9f4;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.nav-menu a {
+    color: #fbf9f4;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #fbf9f4;
+    opacity: 0.8;
+}
+
+.nav-menu .btn-nav {
+    background-color: #8b261f; /* ROJO CEREZA */
+    color: #fbf9f4;
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-left: 15px;
+}
+
+.nav-menu .btn-nav:hover {
+    background-color: #485935; /* VERDE OLIVA */
+    color: #fbf9f4;
+}
+
+/* ==========================================================================
+   PORTADA PRINCIPAL (HERO SECTION)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('img/hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(40, 44, 48, 0.65) 0%, rgba(40, 44, 48, 0.45) 100%);
+}
+
+.hero-content {
+    position: relative;
+    color: #fbf9f4;
+    max-width: 750px;
+    z-index: 10;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.hero-content .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: #fbf9f4;
+    opacity: 0.75;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.brand-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1; 
+    margin-bottom: 25px;
+}
+
+.text-cafe {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 58px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #fbf9f4;
+}
+
+.text-brand {
+    font-family: 'Pinyon Script Local', Georgia, serif !important;
+    font-size: 96px; 
+    color: #fbf9f4;
+    font-weight: 400;
+    margin-top: 5px; 
+    margin-left: 5px;
+    text-transform: none; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: #fbf9f4;
+    opacity: 0.85;
+}
+
+.hero-buttons a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    padding: 14px 30px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #8b261f;
+    color: #fbf9f4;
+    margin-right: 20px;
+}
+
+.btn-primary:hover { background-color: #485935; }
+
+.btn-secondary {
+    border: 2px solid #fbf9f4;
+    color: #fbf9f4;
+}
+
+.btn-secondary:hover {
+    background-color: #fbf9f4;
+    color: #282c30;
+}
+
+/* CONTENEDOR DE LA PORTADA SVG */
+.wave-container {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 15;
+}
+.wave-container svg { display: block; width: calc(100% + 1.3px); height: 110px; }
+.wave-back { fill: #fbf9f4; opacity: 0.55; }
+.wave-front { fill: #fbf9f4; }
+
+/* ==========================================================================
+   SECCIÓN PRODUCTOS (NUESTRO CAFÉ)
+   ========================================================================== */
+.products-section {
+    padding: 100px 10% 140px; 
+    background-color: #fbf9f4;
+}
+
+.section-title { text-align: center; margin-bottom: 50px; }
+.section-title h2 { font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 700; color: #282c30; }
+.divider-center { width: 60px; height: 3px; background-color: #485935; margin: 15px auto 0; }
+
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.product-card { background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(40, 44, 48, 0.04); text-align: center; border: 1px solid #e5e0d5; transition: transform 0.3s; }
+.product-card:hover { transform: translateY(-5px); }
+.product-img { height: 280px; background-color: #fbf9f4; display: flex; justify-content: center; align-items: center; color: #485935; }
+.product-info { padding: 25px; }
+.product-info h3 { font-family: 'Montserrat', sans-serif; font-size: 18px; margin-bottom: 8px; color: #282c30; font-weight: 700; }
+.product-info .notes { color: #4a5157; font-size: 14px; margin-bottom: 12px; }
+.product-info .price { font-family: 'Montserrat', sans-serif; color: #485935; font-weight: 700; font-size: 17px; margin-bottom: 18px; }
+.btn-card { font-family: 'Montserrat', sans-serif; text-decoration: none; display: block; padding: 11px; background: #8b261f; color: #fbf9f4; border-radius: 30px; font-size: 13px; font-weight: 600; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.5px; }
+.btn-card:hover { background: #282c30; color: #fbf9f4; }
+
+/* ==========================================================================
+   SECCIÓN LA FINCA
+   ========================================================================== */
+.about-section {
+    position: relative;
+    padding: 160px 10%; 
+    background-color: #eedec4; /* Tono saco de café de fondo */
+    overflow: hidden;
+}
+
+.wave-top-container { position: absolute; top: -2px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 10; }
+.wave-top-container svg { display: block; width: calc(100% + 1.3px); height: 110px; }
+
+.wave-bottom-container { position: absolute; bottom: -2px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 10; }
+.wave-bottom-container svg { display: block; width: calc(100% + 1.3px); height: 110px; }
+
+.wave-back-finca { fill: #fbf9f4; opacity: 0.55; } 
+.wave-front-finca { fill: #fbf9f4; }
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 15; 
+}
+
+.about-text { flex: 1; }
+.about-text h2 { font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 700; color: #282c30; margin-bottom: 15px; letter-spacing: -0.5px; }
+.divider { width: 60px; height: 3px; background-color: #485935; margin-bottom: 25px; }
+.about-text p { color: #4a5157; margin-bottom: 20px; }
+.about-image { flex: 1; }
+
+/* CARRUSEL AUTOMÁTICO */
+.carousel-wrapper {
+    width: 100%;
+    height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(40, 44, 48, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.carousel-slider {
+    display: flex;
+    width: 400%; 
+    height: 100%;
+    animation: slideCarousel 14s infinite ease-in-out; 
+}
+
+.carousel-slider img {
+    width: 25%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideCarousel {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }  
+    50% { transform: translateX(-50%); }  
+    75% { transform: translateX(-75%); }  
+    100% { transform: translateX(0); }    
+}
+
+/* ==========================================================================
+   FOOTER (PIE DE PÁGINA) CORPORATIVO CON INTEGRACIÓN DE MAPA
+   ========================================================================== */
+.footer {
+    background-color: #282c30;
+    color: #eae3d8;
+    padding: 80px 10% 65px; /* Respiro inferior para la barra flotante */
+}
+.footer-container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 40px; }
+.footer-container div { flex: 1; min-width: 220px; }
+.footer h3, .footer h4 { font-family: 'Montserrat', sans-serif; color: #fbf9f4; margin-bottom: 15px; }
+.footer h3 { letter-spacing: 2px; font-weight: 700; }
+.footer h4 { opacity: 0.9; }
+.footer-links a { display: block; color: #eae3d8; opacity: 0.8; text-decoration: none; margin-bottom: 10px; transition: 0.3s; }
+.footer-links a:hover { color: #8b261f; opacity: 1; }
+
+/* CONFIGURACIÓN DEL ESPACIO DE MAPA PEQUEÑO RESPONSIVO */
+.footer-map-box {
+    flex: 1.1;
+    min-width: 260px;
+}
+.map-responsive {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    line-height: 0;
+}
+
+.footer-bottom { text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 20px; font-size: 13px; }
+
+/* ==========================================================================
+   NUEVO: MARQUESINA FINANCIERA INFERIOR CON PARCHE OPERATIVO IPHONE (IOS)
+   ========================================================================== */
+.chachita-ticker-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e2124;    /* Variante sutil oscura de tu Gris Grafito #282c30 */
+    color: #fbf9f4;               /* Tu firma de color Marfil Premium */
+    font-family: 'Inter', sans-serif; 
+    font-size: 13px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 -6px 25px rgba(40, 44, 48, 0.3);
+    z-index: 999999;              
+    border-top: 2px solid #485935; /* Corona superior con tu Verde Oliva institucional */
+    padding-bottom: env(safe-area-inset-bottom); /* Zona segura nativa para barras de iPhone */
+    
+    /* SEGURIDAD APPLE: Previene colapsos de caja en pantallas de retina */
+    min-width: 100%;
+}
+
+/* Carril que contiene los textos en desplazamiento horizontal continuo */
+.chachita-ticker-track {
+    display: flex;
+    flex-direction: row;       /* FUERZA a Safari de Apple a mantener los bloques alineados en línea */
+    flex-wrap: nowrap;         /* BLINDAJE EXTRA: Prohíbe los saltos de renglón hacia abajo en iOS */
+    width: max-content;        /* OBLIGATORIO IOS: Mide dinámicamente el ancho de su contenido real */
+    padding-left: 100%;
+    
+    /* Aceleración por Hardware nativa de Apple para renderizar por GPU (Elimina saltos bruscos) */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    
+    animation: chachitaMarquee 32s linear infinite; 
+}
+
+/* Formato para cada bloque individual de datos */
+.chachita-ticker-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 85px; 
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    
+    /* OBLIGATORIO SAFARI: Impide que las frases se compriman o deformen verticalmente */
+    flex-shrink: 0; 
+    white-space: nowrap; 
+}
+
+.chachita-ticker-item .ticker-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #eedec4;               /* Tono arena suave del footer */
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.chachita-ticker-item .ticker-value {
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.chachita-ticker-item .ticker-status {
+    color: #8cb97d;               /* Verde suave que contrasta con el fondo oscuro */
+    font-size: 11px;
+    margin-left: 6px;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+/* Animación duplicada de compatibilidad acelerada */
+@keyframes chachitaMarquee {
+    0% { 
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0); 
+    }
+    100% { 
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0); 
+    }
+}
+
+.chachita-ticker-container:hover .chachita-ticker-track {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   ADAPTACIÓN MÓVIL RESPONSIVA TERMINADA
+   ========================================================================== */
+.menu-toggle { display: none; flex-direction: column; background: none; border: none; cursor: pointer; }
+.menu-toggle span { width: 24px; height: 2.5px; background-color: #fbf9f4; margin: 2.5px 0; transition: 0.4s; }
+
+@media (max-width: 768px) {
+    .header { top: 10px; left: 4%; width: 92%; padding: 12px 6%; border-radius: 25px; }
+    .menu-toggle { display: flex; }
+    .nav-menu { position: absolute; top: 110%; left: 0; width: 100%; height: auto; background-color: rgba(40, 44, 48, 0.98); border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); display: none; flex-direction: column; align-items: center; padding: 20px 0; }
+    .nav-menu.active { display: flex; }
+    .nav-menu a { margin: 12px 0; font-size: 15px; }
+    .nav-menu .btn-nav { margin-left: 0; margin-top: 5px; }
+    .container { flex-direction: column; gap: 40px; }
+    .header-finca-text { display: none; }
+    .text-cafe { font-size: 42px; letter-spacing: 6px; }
+    .text-brand { font-size: 72px; margin-top: 5px; }
+    .hero-content h1 { margin-bottom: 15px; }
+    .wave-container svg, .wave-top-container svg, .wave-bottom-container svg { height: 70px; }
+    .carousel-wrapper { height: 260px; } 
+    .footer-map-box { margin-top: 20px; width: 100%; }
+
+    /* REDISEÑO ERGONÓMICO DE TIRILLA EN SMARTPHONES (NO OBSTRUYE WHATSAPP) */
+    .footer {
+        padding-bottom: 95px !important; /* Más respiro para no empalmarse con la barra flotante */
+    }
+
+    .chachita-ticker-container {
+        height: 36px; /* Más delgada en móviles para priorizar pantalla limpia */
+        font-size: 12px;
+    }
+
+    .chachita-ticker-item {
+        margin-right: 55px; /* Menor separación para acelerar suavemente el paso */
+    }
+
+    .chachita-ticker-item .ticker-title {
+        font-size: 10px;
+        letter-spacing: 0.8px;
+    }
+}
