@@ -17,14 +17,15 @@
     <!-- BARRA DE NAVEGACIÓN (HEADER FLOATING GLASS CON NOMBRE INSTITUCIONAL SOBRIO) -->
     <header class="header">
         <div class="logo-container">
-            <!-- Tu logo cargado desde la carpeta local /img -->
-            <img src="img/logo_villa_chachita.png" alt="Logo Villa Chachita" class="header-logo">
-            <!-- Texto corporativo minimalista espaciado -->
+            <!-- Nuevo logo SVG a la izquierda -->
+            <img src="img/logo_color_with_photo.svg" alt="Logo Villa Chachita" class="header-logo">
+            <!-- Texto corporativo minimalista restaurado con su estilo institucional -->
             <span class="header-finca-text">Finca Villa Chachita</span>
         </div>
         <nav class="nav-menu" id="navMenu">
             <a href="#inicio" class="active">Inicio</a>
             <a href="#productos">Nuestro Café</a>
+            <a href="#camisetas">Camisetas</a>
             <a href="#historia">La Finca</a>
             <a href="#contacto" class="btn-nav">Contacto</a>
         </nav>
@@ -35,23 +36,19 @@
         </button>
     </header>
 
+
     <!-- SECCIÓN HERO (PORTADA CON IDENTIDAD DE AUTOR Y NAVEGACIÓN INTERNA EN BOTONES) -->
     <section id="inicio" class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="subtitle">CAFÉ DE ORIGEN EXCLUSIVO • FINCA VILLA CHACHITA</span>
             
-            <!-- Estructura del juego tipográfico corporativo definitivo -->
-            <h1 class="brand-title">
-                <span class="text-cafe">CAFÉ</span>
-                <span class="text-brand">La Chachita</span>
-            </h1>
+            <!-- NUEVO LOGO UNIFICADO CON TEXTO HORIZONTAL -->
+            <img src="img/logo_color_with_photo_and_text_ver.svg" alt="Café La Chachita" class="hero-brand-logo-unificado">
             
             <p class="hero-description">Tradición, aroma y sabor excepcional cultivado con pasión en nuestra finca. Una experiencia sensorial única directo a tu taza.</p>
-            <div class="hero-buttons">
-                <!-- Botón que lleva fluidamente al catálogo justo abajo -->
+		<div class="hero-buttons">
                 <a href="#productos" class="btn-primary">Ver Café</a>
-                <!-- Botón que lleva fluidamente a la historia de la finca más abajo -->
                 <a href="#historia" class="btn-secondary">Reservar Tour</a>
             </div>
         </div>
@@ -65,7 +62,7 @@
         </div>
     </section>
 
-    <!-- 1. SECCIÓN PRODUCTOS ESTRELLA -->
+    <!-- 1. SECCIÓN PRODUCTOS ESTRELLA (CAFÉ) -->
     <section id="productos" class="products-section">
         <div class="section-title">
             <h2>Nuestra Selección Especial</h2>
@@ -80,8 +77,7 @@
                     <h3>Café La Chachita - Cotidiano</h3>
                     <p class="notes">Notas: Chocolate, caramelo y frutos rojos</p>
                     <p class="price" id="web-precio-cotidiano">$27,000 COP</p>
-                    <!-- Al pulsar redirige suavemente al bloque de contacto abajo -->
-                    <a href="#contacto" class="btn-card">Comprar ahora</a>
+                    <a href="https://wa.me" target="_blank" class="btn-card">Comprar ahora</a>
                 </div>
             </div>
             <!-- Producto 2 -->
@@ -91,17 +87,65 @@
                     <h3>Café La Chachita - De Especialidad</h3>
                     <p class="notes">Notas: Cítrico suave, miel y panela</p>
                     <p class="price" id="web-precio-especialidad">$39,000 COP</p>
-                    <!-- Al pulsar redirige suavemente al bloque de contacto abajo -->
-                    <a href="#contacto" class="btn-card">Comprar ahora</a>
+                    <a href="https://wa.me" target="_blank" class="btn-card">Comprar ahora</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. SECCIÓN NUESTRA HISTORIA (CON MONTAÑAS ARRIBA, ABAJO Y CARRUSEL ANIMADO) -->
+    <!-- 2. SECCIÓN MERCHANDISING / CAMISETAS OFICIALES -->
+    <section id="camisetas" class="products-section" style="background-color: #fcf9f5; padding-top: 60px;">
+        <div class="section-title">
+            <h2>Camisetas Oficiales</h2>
+            <p>Café La Chachita: se bebe, se siente, se viste.</p>
+            <div class="divider-center"></div>
+        </div>
+        <div class="products-grid">
+            <!-- Camiseta 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="img/camiseta1.svg" alt="Tradición en cada paso" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                </div>
+                <div class="product-info">
+                    <h3>Tradición en cada paso</h3>
+                    <!-- NOTA ACTUALIZADA -->
+                    <p class="notes">Moda urbana corte oversize con tela premium inspirada en acuarela de nuestros arrieros</p>
+                    <p class="price">$69,000 COP</p>
+                    <a href="https://wa.me" target="_blank" class="btn-card">Comprar ahora</a>
+                </div>
+            </div>
+            <!-- Camiseta 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="img/camiseta2.svg" alt="De la tierra a la taza" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                </div>
+                <div class="product-info">
+                    <h3>De la tierra a la taza</h3>
+                    <!-- NOTA ACTUALIZADA -->
+                    <p class="notes">En su corte oversize con tela premium realiza la transición del cafeto a su nectar</p>
+                    <p class="price">$69,000 COP</p>
+                    <a href="https://wa.me" target="_blank" class="btn-card">Comprar ahora</a>
+                </div>
+            </div>
+            <!-- Camiseta 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="img/camiseta3.svg" alt="El arte del filtrado" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                </div>
+                <div class="product-info">
+                    <h3>El arte del filtrado</h3>
+                    <!-- NOTA ACTUALIZADA -->
+                    <p class="notes">Bajo lo urbano oversize y tela premium que incita a una extracción de calidad</p>
+                    <p class="price">$69,000 COP</p>
+                    <a href="https://wa.me" target="_blank" class="btn-card">Comprar ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+
+    <!-- 3. SECCIÓN NUESTRA HISTORIA -->
     <section id="historia" class="about-section">
-        
-        <!-- MONTAÑA SUPERIOR CON SILUETA DOBLE MUY MARCADA -->
         <div class="wave-top-container">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M0,80 C400,30 700,110 950,50 C1100,20 1160,10 1200,15 L1200,0 L0,0 Z" class="wave-back-finca"></path>
@@ -117,7 +161,6 @@
                 <p>Cada bolsa de **Café La Chachita** es el resultado de un proceso artesanal y sostenible, recolectado a mano para garantizar que solo los mejores frutos lleguen a tu mesa.</p>
             </div>
             
-            <!-- CONTENEDOR DEL CARRUSEL DE IMÁGENES -->
             <div class="about-image">
                 <div class="carousel-wrapper">
                     <div class="carousel-slider">
@@ -130,7 +173,6 @@
             </div>
         </div>
 
-        <!-- MONTAÑA INFERIOR CON TRANSPARENCIA FUERTE HACIA EL FOOTER -->
         <div class="wave-bottom-container">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M0,40 C250,5 580,100 880,30 C1020,0 1140,-5 1200,5 L1200,120 L0,120 Z" class="wave-back-finca"></path>
@@ -151,18 +193,19 @@
                 <h4>Enlaces</h4>
                 <a href="#inicio">Inicio</a>
                 <a href="#productos">Nuestro Café</a>
+                <a href="#camisetas">Camisetas</a>
                 <a href="#historia">La Finca</a>
             </div>
             
             <div class="footer-contact">
                 <h4>Contacto Directo</h4>
                 <p>📍 Origen: Apía, Risaralda, Colombia</p>
-                <p>📞 Ventas: <a href="https://whatsapp.com." target="_blank" style="color: #eedec4; text-decoration: underline;">+57 312 208 8282</a></p>
-                <p>📞 Reservas / Tours: <a href="https://whatsapp.com." target="_blank" style="color: #eedec4; text-decoration: underline;">+57 311 737 3016</a></p>
+                <p>📞 Ventas: <a href="https://wa.me" target="_blank" style="color: #eedec4; text-decoration: underline;">+57 312 208 8282</a></p>
+                <p>📞 Reservas / Tours: <a href="https://wa.me" target="_blank" style="color: #eedec4; text-decoration: underline;">+57 311 737 3016</a></p>
                 <p>✉️ Correo: <a href="mailto:ventas@villachachita.com" style="color: #eedec4; text-decoration: none;">ventas@villachachita.com</a></p>
             </div>
 
-            <!-- TU MAPA OFICIAL DE GOOGLE MAPS ADAPTADO EN TAMAÑO DISCRETO -->
+            <!-- RESTAURADO: BLOQUE OFICIAL DEL MAPA INTERACTIVO -->
             <div class="footer-map-box">
                 <h4>¿Cómo llegar?</h4>
                 <div class="map-responsive">
@@ -174,25 +217,3 @@
             <p>&copy; 2026 Café La Chachita. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <!-- SCRIPT DEL MENÚ MÓVIL DESPLEGABLE -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-    </script>
-
-    <!-- MARQUESINA FINANCIERA INFERIOR DINÁMICA -->
-    <div class="chachita-ticker-container">
-        <div class="chachita-ticker-track" id="chachita-ticker-data">
-            <!-- Inyección desde script.js -->
-        </div>
-    </div>
-
-    <!-- ENLACE A TU ARCHIVO EXTERNO DE LÓGICA -->
-    <script src="script.js"></script>
-</body>
-</html>

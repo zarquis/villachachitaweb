@@ -141,11 +141,13 @@ body {
     text-transform: uppercase;
 }
 
-.brand-title {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1; 
-    margin-bottom: 25px;
+/* DISEÑO DEL LOGO UNIFICADO EN PORTADA */
+.hero-brand-logo-unificado {
+    height: 250px; /* Altura ideal para lucir el isotipo junto al texto */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 30px; /* Espacio elegante antes de la descripción */
 }
 
 .text-cafe {
@@ -208,7 +210,6 @@ body {
     color: #282c30;
 }
 
-/* CONTENEDOR DE LA PORTADA SVG */
 .wave-container {
     position: absolute;
     bottom: -2px;
@@ -223,7 +224,7 @@ body {
 .wave-front { fill: #fbf9f4; }
 
 /* ==========================================================================
-   SECCIÓN PRODUCTOS (NUESTRO CAFÉ)
+   SECCIÓN PRODUCTOS (NUESTRO CAFÉ Y CAMISETAS)
    ========================================================================== */
 .products-section {
     padding: 100px 10% 140px; 
@@ -237,7 +238,7 @@ body {
 .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .product-card { background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(40, 44, 48, 0.04); text-align: center; border: 1px solid #e5e0d5; transition: transform 0.3s; }
 .product-card:hover { transform: translateY(-5px); }
-.product-img { height: 280px; background-color: #fbf9f4; display: flex; justify-content: center; align-items: center; color: #485935; }
+.product-img { height: 280px; background-color: #fbf9f4; display: flex; justify-content: center; align-items: center; color: #485935; font-weight: bold; }
 .product-info { padding: 25px; }
 .product-info h3 { font-family: 'Montserrat', sans-serif; font-size: 18px; margin-bottom: 8px; color: #282c30; font-weight: 700; }
 .product-info .notes { color: #4a5157; font-size: 14px; margin-bottom: 12px; }
@@ -349,8 +350,8 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #1e2124;    /* Variante sutil oscura de tu Gris Grafito #282c30 */
-    color: #fbf9f4;               /* Tu firma de color Marfil Premium */
+    background-color: #1e2124;    
+    color: #fbf9f4;               
     font-family: 'Inter', sans-serif; 
     font-size: 13px;
     height: 42px;
@@ -359,48 +360,39 @@ body {
     overflow: hidden;
     box-shadow: 0 -6px 25px rgba(40, 44, 48, 0.3);
     z-index: 999999;              
-    border-top: 2px solid #485935; /* Corona superior con tu Verde Oliva institucional */
-    padding-bottom: env(safe-area-inset-bottom); /* Zona segura nativa para barras de iPhone */
-    
-    /* SEGURIDAD APPLE: Previene colapsos de caja en pantallas de retina */
+    border-top: 2px solid #485935; 
+    padding-bottom: env(safe-area-inset-bottom); 
     min-width: 100%;
 }
 
-/* Carril que contiene los textos en desplazamiento horizontal continuo */
 .chachita-ticker-track {
     display: flex;
-    flex-direction: row;       /* FUERZA a Safari de Apple a mantener los bloques alineados en línea */
-    flex-wrap: nowrap;         /* BLINDAJE EXTRA: Prohíbe los saltos de renglón hacia abajo en iOS */
-    width: max-content;        /* OBLIGATORIO IOS: Mide dinámicamente el ancho de su contenido real */
+    flex-direction: row;       
+    flex-wrap: nowrap;         
+    width: max-content;        
     padding-left: 100%;
-    
-    /* Aceleración por Hardware nativa de Apple para renderizar por GPU (Elimina saltos bruscos) */
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000;
     perspective: 1000;
-    
     animation: chachitaMarquee 32s linear infinite; 
 }
 
-/* Formato para cada bloque individual de datos */
 .chachita-ticker-item {
     display: inline-flex;
     align-items: center;
     margin-right: 85px; 
     font-weight: 400;
     letter-spacing: 0.3px;
-    
-    /* OBLIGATORIO SAFARI: Impide que las frases se compriman o deformen verticalmente */
     flex-shrink: 0; 
     white-space: nowrap; 
 }
 
 .chachita-ticker-item .ticker-title {
     font-family: 'Montserrat', sans-serif;
-    color: #eedec4;               /* Tono arena suave del footer */
+    color: #eedec4;               
     text-transform: uppercase;
     font-size: 11px;
     font-weight: 600;
@@ -416,14 +408,13 @@ body {
 }
 
 .chachita-ticker-item .ticker-status {
-    color: #8cb97d;               /* Verde suave que contrasta con el fondo oscuro */
+    color: #8cb97d;               
     font-size: 11px;
     margin-left: 6px;
     font-style: italic;
     white-space: nowrap;
 }
 
-/* Animación duplicada de compatibilidad acelerada */
 @keyframes chachitaMarquee {
     0% { 
         -webkit-transform: translate3d(0, 0, 0);
@@ -457,27 +448,51 @@ body {
     .header-finca-text { display: none; }
     .text-cafe { font-size: 42px; letter-spacing: 6px; }
     .text-brand { font-size: 72px; margin-top: 5px; }
+	.hero-brand-logo-unificado {
+        height: 110px; /* Se reduce proporcionalmente en celulares */
+        margin-left: auto;
+        margin-right: auto; /* Centrado automático en pantallas móviles */
+    }
     .hero-content h1 { margin-bottom: 15px; }
     .wave-container svg, .wave-top-container svg, .wave-bottom-container svg { height: 70px; }
     .carousel-wrapper { height: 260px; } 
     .footer-map-box { margin-top: 20px; width: 100%; }
 
-    /* REDISEÑO ERGONÓMICO DE TIRILLA EN SMARTPHONES (NO OBSTRUYE WHATSAPP) */
     .footer {
-        padding-bottom: 95px !important; /* Más respiro para no empalmarse con la barra flotante */
+        padding-bottom: 95px !important; 
     }
-
     .chachita-ticker-container {
-        height: 36px; /* Más delgada en móviles para priorizar pantalla limpia */
+        height: 36px; 
         font-size: 12px;
     }
-
     .chachita-ticker-item {
-        margin-right: 55px; /* Menor separación para acelerar suavemente el paso */
+        margin-right: 55px; 
     }
-
     .chachita-ticker-item .ticker-title {
         font-size: 10px;
         letter-spacing: 0.8px;
     }
+}
+
+/* ==========================================================================
+   EFECTO ZOOM PREMIUM REFORZADO PARA SECCIÓN CAMISETAS
+   ========================================================================== */
+
+/* 1. Preparación del contenedor gris de la foto */
+#camisetas .product-img {
+    overflow: hidden !important;
+    position: relative;
+}
+
+/* 2. Estado base de la imagen (añadimos filtro de nitidez) */
+#camisetas .product-img img {
+    transition: all 0.4s ease-in-out !important;
+    transform: scale(1) !important;
+    opacity: 0.95;
+}
+
+/* 3. Activación en simultáneo: la tarjeta sube y la imagen interna crece */
+#camisetas .product-card:hover .product-img img {
+    transform: scale(1.12) !important; /* Zoom del 12% hacia el frente */
+    opacity: 1 !important;              /* Brillo total al enfocar */
 }
