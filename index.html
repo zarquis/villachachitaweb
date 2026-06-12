@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café La Chachita | Producido en Finca Villa Chachita</title>
+    <title>Café La Chachita | Café de Origen de Apía, Risaralda</title>
     
     <!-- CONEXIÓN DE GOOGLE FONTS PARA TUS FUENTES INSTITUCIONALES -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
     
+	<link rel="icon" type="image/svg+xml" href="img/logo_color_new.svg">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,11 +18,8 @@
     <!-- BARRA DE NAVEGACIÓN (HEADER FLOATING GLASS CON NOMBRE INSTITUCIONAL SOBRIO) -->
     <header class="header">
         <div class="logo-container">
-            <!-- Nuevo logo SVG a la izquierda -->
-            <img src="img/logo_color_with_photo.svg" alt="Logo Villa Chachita" class="header-logo">
-            <!-- Texto corporativo minimalista restaurado con su estilo institucional -->
-            <span class="header-finca-text">Finca Villa Chachita</span>
-        </div>
+			<img src="img/logo_color_new.svg" alt="Café La Chachita" class="header-logo">
+		</div>
         <nav class="nav-menu" id="navMenu">
             <a href="#inicio" class="active">Inicio</a>
             <a href="#productos">Nuestro Café</a>
@@ -41,15 +39,14 @@
     <section id="inicio" class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="subtitle">CAFÉ DE ORIGEN EXCLUSIVO • FINCA VILLA CHACHITA</span>
+            <span class="subtitle">CAFÉ DE ORIGEN • APÍA, RISARALDA</span>
             
             <!-- NUEVO LOGO UNIFICADO CON TEXTO HORIZONTAL -->
-            <img src="img/logo_color_with_photo_and_text_ver.svg" alt="Café La Chachita" class="hero-brand-logo-unificado">
-            
-            <p class="hero-description">Tradición, aroma y sabor excepcional cultivado con pasión en nuestra finca. Una experiencia sensorial única directo a tu taza.</p>
+            <img src="img/Cafe_La_Chachita_Horizontal_FINAL - MARFIL.svg" alt="Café La Chachita" class="hero-brand-logo-unificado">
+            <p class="hero-description">Cultivado en las montañas de Apía, Risaralda. Un café de origen que refleja la tradición, el paisaje y la dedicación de nuestra familia cafetera.</p>
 		<div class="hero-buttons">
                 <a href="#productos" class="btn-primary">Ver Café</a>
-                <a href="#historia" class="btn-secondary">Reservar Tour</a>
+                <a href="#historia" class="btn-secondary">Conoce la Finca</a>
             </div>
         </div>
 
@@ -65,33 +62,63 @@
     <!-- 1. SECCIÓN PRODUCTOS ESTRELLA (CAFÉ) -->
     <section id="productos" class="products-section">
         <div class="section-title">
-            <h2>Nuestra Selección Especial</h2>
-            <p>Disfruta de Café La Chachita en sus diferentes perfiles de taza</p>
+            <h2>Nuestro Café</h2>
+            <p>Tres perfiles de taza para diferentes momentos y experiencias.</p>
             <div class="divider-center"></div>
         </div>
-        <div class="products-grid">
-            <!-- Producto 1 -->
-            <div class="product-card">
-                <div class="product-img">🎨 [Bolsa Café La Chachita Cotidiano]</div>
-                <div class="product-info">
-                    <h3>Café La Chachita - Cotidiano</h3>
-                    <p class="notes">Notas: Chocolate, caramelo y frutos rojos</p>
-                    <p class="price" id="web-precio-cotidiano">$27,000 COP</p>
-                    <a href="https://wa.me" target="_blank" class="btn-card">Comprar ahora</a>
-                </div>
-            </div>
-            <!-- Producto 2 -->
-            <div class="product-card">
-                <div class="product-img">🎨 [Bolsa Café La Chachita De Especialidad]</div>
-                <div class="product-info">
-                    <h3>Café La Chachita - De Especialidad</h3>
-                    <p class="notes">Notas: Cítrico suave, miel y panela</p>
-                    <p class="price" id="web-precio-especialidad">$39,000 COP</p>
-                    <a href="https://wa.me" target="_blank" class="btn-card">Comprar ahora</a>
-                </div>
-            </div>
+<div class="products-grid">
+    <!-- Café Cotidiano -->
+    <div class="product-card">
+        <div class="product-img">
+            <img src="img/bolsa_tradicional.png" alt="Café La Chachita Cotidiano" style="width:100%; height:100%; object-fit:contain; padding:20px;">
         </div>
+        <div class="product-info">
+            <h3>Café Cotidiano</h3>
+            <p class="notes">Una taza equilibrada para acompañar tu día a día. Dulzor agradable, cuerpo medio y perfil tradicional.</p>
+            <p class="price">$29,000 COP</p>
+            <a href="https://wa.me/573122088282" target="_blank" class="btn-card">Comprar ahora</a>
+        </div>
+    </div>
+
+    <!-- Café Suave Lavado -->
+    <div class="product-card">
+        <div class="product-img">
+            <img src="img/bolsa_lavado.png" alt="Café Suave Lavado" style="width:100%; height:100%; object-fit:contain; padding:20px;">
+        </div>
+        <div class="product-info">
+            <h3>Café Suave Lavado</h3>
+            <p class="notes">Proceso lavado con perfil limpio y brillante, notas de caramelo, frutos rojos y una acidez balanceada.</p>
+            <p class="price">$39,000 COP</p>
+            <a href="https://wa.me/573122088282" target="_blank" class="btn-card">Comprar ahora</a>
+        </div>
+    </div>
+
+    <!-- Especialidad Honey -->
+    <div class="product-card">
+        <div class="product-img">
+            <img src="img/bolsa_honey.png" alt="Especialidad Honey" style="width:100%; height:100%; object-fit:contain; padding:20px;">
+        </div>
+        <div class="product-info">
+            <h3>Especialidad Honey</h3>
+            <p class="notes">Proceso Honey con dulzor pronunciado, notas de cacao, miel y caña de azúcar, con gran complejidad en taza.</p>
+            <p class="price">$49,000 COP</p>
+            <a href="https://wa.me/573122088282" target="_blank" class="btn-card">Comprar ahora</a>
+        </div>
+    </div>
+</div>
     </section>
+	
+	<!-- DIVISOR MULTICAPA: MONTAÑAS SUPERPUESTAS CON TRANSPARENCIAS -->
+    <div class="finca-montanas-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="montana-svg-container">
+            <!-- Capa de fondo: Verde Oliva con 30% de opacidad -->
+            <path d="M0,30 C300,-10 500,90 800,20 C950,-5 1100,-10 1200,5 L1200,120 L0,120 Z" fill="#485935" opacity="0.3"></path>
+            <!-- Capa intermedia: Tono Saco de Café con 50% de opacidad -->
+            <path d="M0,50 C200,110 400,20 600,60 C750,100 950,30 1100,70 C1160,85 1200,50 1200,50 L1200,120 L0,120 Z" fill="#eedec4" opacity="0.5"></path>
+            <!-- Capa frontal: Fusión total con el crema de la sección inferior (#fcf9f5) -->
+            <path d="M0,70 C150,110 300,50 500,85 C700,120 900,40 1050,80 C1150,95 1200,65 1200,65 L1200,120 L0,120 Z" fill="#fcf9f5"></path>
+        </svg>
+    </div>
 
     <!-- 2. SECCIÓN MERCHANDISING / CAMISETAS OFICIALES -->
     <section id="camisetas" class="products-section" style="background-color: #fcf9f5; padding-top: 60px;">
@@ -186,7 +213,8 @@
         <div class="footer-container">
             <div class="footer-info">
                 <h3>CAFÉ LA CHACHITA</h3>
-                <p>Llevando la esencia y pureza de la Finca Villa Chachita directo a tu taza.</p>
+				<p>Café de origen cultivado en las montañas de Apía, Risaralda.</p>
+				<p>Tradición cafetera, procesos cuidadosos y una taza con identidad propia.</p>
             </div>
             
             <div class="footer-links">

@@ -2,10 +2,18 @@
    INYECCIÓN LOCAL DE LA FIRMA (CARGA BLINDADA DESDE TU CARPETA)
    ========================================================================== */
 @font-face {
-    font-family: 'Pinyon Script Local';
-    src: url('img/PinyonScript-Regular.ttf') format('truetype');
+    font-family: 'Great Vibes Local';
+    src: url('img/GreatVibes-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+}
+
+:root{
+    --marfil:#FBF9F4;
+    --beige:#EEDEC4;
+    --terracota:#8B261F;
+    --oliva:#485935;
+    --grafito:#282C30;
 }
 
 /* CONFIGURACIÓN GENERAL Y BASE DEL SITIO (FONDO MARFIL PREMIUM) */
@@ -52,9 +60,10 @@ body {
 }
 
 .header-logo {
-    height: 45px;
+    height: 58px;
     width: auto;
     object-fit: contain;
+    display: block;
 }
 
 .header-finca-text {
@@ -104,7 +113,8 @@ body {
 .hero-section {
     position: relative;
     height: 100vh;
-    background: url('img/hero.jpg') no-repeat center center/cover;
+    background: url('img/hero2.jpg') no-repeat center top/cover;
+	background-position: center 15%;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -117,37 +127,49 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(40, 44, 48, 0.65) 0%, rgba(40, 44, 48, 0.45) 100%);
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(40,44,48,0.82) 0%,
+        rgba(40,44,48,0.72) 45%,
+        rgba(40,44,48,0.65) 100%
+    );
 }
 
 .hero-content {
     position: relative;
-    color: #fbf9f4;
-    max-width: 750px;
+    color: var(--marfil);
+    max-width: 900px;
     z-index: 10;
     margin-top: 40px;
     margin-bottom: 70px;
+	background: rgba(40,44,48,0.15);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+	padding: 50px 60px;
 }
 
 .hero-content .subtitle {
     font-family: 'Montserrat', sans-serif;
-    color: #fbf9f4;
-    opacity: 0.75;
+    color: var(--beige);
+    opacity: 0.95;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     font-size: 12px;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
 /* DISEÑO DEL LOGO UNIFICADO EN PORTADA */
 .hero-brand-logo-unificado {
-    height: 250px; /* Altura ideal para lucir el isotipo junto al texto */
-    width: auto;
-    object-fit: contain;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
     display: block;
-    margin-bottom: 30px; /* Espacio elegante antes de la descripción */
+    margin-bottom: 28px;
+	filter: drop-shadow(0 6px 18px rgba(0,0,0,.45));
 }
 
 .text-cafe {
@@ -159,7 +181,7 @@ body {
 }
 
 .text-brand {
-    font-family: 'Pinyon Script Local', Georgia, serif !important;
+    font-family: 'Great Vibes Local', cursive !important;
     font-size: 96px; 
     color: #fbf9f4;
     font-weight: 400;
@@ -171,12 +193,13 @@ body {
 
 .hero-description {
     font-family: 'Inter', sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 1.7;
-    margin-bottom: 35px;
-    color: #fbf9f4;
-    opacity: 0.85;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--marfil);
+    opacity: 0.92;
+    max-width: 620px;
 }
 
 .hero-buttons a {
@@ -193,16 +216,18 @@ body {
 }
 
 .btn-primary {
-    background-color: #8b261f;
-    color: #fbf9f4;
+    background-color: var(--terracota);
+    color: var(--marfil);
     margin-right: 20px;
 }
 
-.btn-primary:hover { background-color: #485935; }
+.btn-primary:hover {
+    background-color: var(--oliva);
+}
 
 .btn-secondary {
-    border: 2px solid #fbf9f4;
-    color: #fbf9f4;
+    border: 2px solid var(--marfil);
+    color: var(--marfil);
 }
 
 .btn-secondary:hover {
@@ -320,7 +345,7 @@ body {
 }
 .footer-container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 40px; }
 .footer-container div { flex: 1; min-width: 220px; }
-.footer h3, .footer h4 { font-family: 'Montserrat', sans-serif; color: #fbf9f4; margin-bottom: 15px; }
+.footer h3, .footer h4 { font-family: 'Montserrat', sans-serif; color: var(--beige); margin-bottom: 15px; }
 .footer h3 { letter-spacing: 2px; font-weight: 700; }
 .footer h4 { opacity: 0.9; }
 .footer-links a { display: block; color: #eae3d8; opacity: 0.8; text-decoration: none; margin-bottom: 10px; transition: 0.3s; }
@@ -449,10 +474,12 @@ body {
     .text-cafe { font-size: 42px; letter-spacing: 6px; }
     .text-brand { font-size: 72px; margin-top: 5px; }
 	.hero-brand-logo-unificado {
-        height: 110px; /* Se reduce proporcionalmente en celulares */
-        margin-left: auto;
-        margin-right: auto; /* Centrado automático en pantallas móviles */
-    }
+		width: 100%;
+		max-width: 340px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
     .hero-content h1 { margin-bottom: 15px; }
     .wave-container svg, .wave-top-container svg, .wave-bottom-container svg { height: 70px; }
     .carousel-wrapper { height: 260px; } 
@@ -495,4 +522,63 @@ body {
 #camisetas .product-card:hover .product-img img {
     transform: scale(1.12) !important; /* Zoom del 12% hacia el frente */
     opacity: 1 !important;              /* Brillo total al enfocar */
+}
+
+/* ==========================================================================
+   NUEVOS AJUSTES ESTÉTICOS: MONTAÑA INTERMEDIA Y BORDES SUAVES
+   ========================================================================== */
+
+/* ==========================================================================
+   ESTRUCTURACIÓN DE MONTAÑAS MULTICAPA (CAFÉ A CAMISETAS)
+   ========================================================================== */
+.finca-montanas-divider {
+    position: relative;
+    z-index: 99;
+    background-color: #fbf9f4; /* Fondo marfil de la sección superior */
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+    margin-bottom: -2px; /* Evita líneas de separación artificiales */
+}
+
+.montana-svg-container {
+    display: block;
+    width: 100%;
+    height: 110px; /* Mayor altura para apreciar la profundidad */
+    transform: rotate(180deg); /* Invierte las curvas para simular el relieve hacia abajo */
+}
+
+/* Ajuste ergonómico para smartphones */
+@media (max-width: 768px) {
+    .montana-svg-container {
+        height: 70px;
+    }
+}
+
+
+/* Fuerza el redondeado absoluto en la tarjeta completa */
+#camisetas .product-card,
+section#camisetas .product-card {
+    border-radius: 20px !important;
+    overflow: hidden !important; /* Corta de raíz los bordes rectos internos */
+}
+
+/* Control del contenedor gris del SVG de la camiseta */
+#camisetas .product-img,
+section#camisetas .product-card .product-img {
+    border-radius: 20px 20px 0 0 !important;
+    overflow: hidden !important;
+    position: relative;
+}
+
+/* Estado base del vector SVG de la prenda */
+#camisetas .product-img img {
+    border-radius: 20px 20px 0 0 !important;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    transform: scale(1) !important;
+}
+
+/* Activación combinada: La tarjeta sube y el SVG de la camiseta hace zoom */
+#camisetas .product-card:hover .product-img img {
+    transform: scale(1.10) !important; /* Zoom controlado del 10% hacia el frente */
 }
